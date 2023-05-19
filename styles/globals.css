@@ -21,3 +21,18 @@ body {
   background-attachment: fixed;
   height:100%;
 }
+
+@layer components {
+  .titles {
+    @apply mb-2 font-semibold text-cyan-500 text-lg
+  }
+  .social-media {
+    @apply w-8 h-8 flex justify-center items-center
+  }
+  .social-container {
+    @apply hover:bg-amber-600 transition rounded-full mb-2
+  }
+  .hover-links {
+    @apply hover:text-emerald-400 transition
+  }
+} 
