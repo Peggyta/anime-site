@@ -15,27 +15,28 @@ const AnimeDetails = (props) => {
             </div>
             <div>
                 <h3 className='sm:text-4xl lg:text-left text-center text-2xl text-blue-100'>{name} ({details[2].Year})</h3>
-            <div className='flex flex-col items-center lg:items-left sm:flex-row sm:gap-4 gap-1 text-blue-300 mt-2 font-semibold text-lg'>
+            <div className='flex flex-col items-center lg:items-left sm:flex-row sm:gap-4 gap-1 text-blue-400 mt-2 font-semibold text-lg'>
                 <p>Age: {age ? age : 'everyone'}</p>
                 <p>Rate: {rate}/10</p>
                 <p>Episodes: {episode}</p>
                 <p className='border px-2 rounded-lg border-blue-500'>{television[4]}</p>
             </div>
-            <div className='flex sm:justify-start justify-center gap-4 mt-2'>
-                <p>Genre: {details[1].Genre}</p> | 
+            <div className='flex sm:flex-row flex-col text-center sm:text-left sm:justify-start justify-center gap-2 mt-2'>
+                <p>Genre: {details[1].Genre} </p> 
+                <span>|</span>
                 <p>Length: {details[3].Length}</p>
             </div>
             <div>
                 <p className='text-center sm:text-left'>Quality: {quality}</p>
             </div>
             <div className='mt-4 sm:w-128 w-auto'>
-                <p className='text-justify'><span className='font-semibold text-blue-300'>
+                <p className='text-justify'><span className='font-semibold text-blue-400'>
                     Introduction: </span>{introduction}</p> 
             </div>
             <div className='lg:mt-16 mt-6'>
                 <p>{television[0]}</p>
                 <p>Countery: {details[0].Country}</p>
-                <div className='w-full px-6'>
+                <div className='w-full '>
                     <button className='w-full flex justify-center items-center gap-2 bg-emerald-600 
                         text-blue-100 font-bold sm:text-2xl text-base p-3 rounded-xl 
                         hover:bg-orange-500 transition mt-12'><Play />Watch Online
@@ -46,7 +47,7 @@ const AnimeDetails = (props) => {
         </div>
         
         <div className='mb-10 mt-2 lg:flex lg:justify-start lg:flex-col'>
-            <h4 className='font-semibold text-center lg:text-left text-lg text-blue-300'>Manga:</h4>
+            <h4 className='font-semibold text-center lg:text-left text-lg text-blue-400'>Manga:</h4>
             {manga.map((item, index)=> (
                 <ul key={index} className='sm:w-72 lg:mx-0 py-2 w-auto mx-auto'>
                     <li className={index % 2 ? 
