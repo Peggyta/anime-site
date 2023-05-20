@@ -8,12 +8,13 @@ const Layout = ({children}) => {
             <header className='max-w-6xl mx-auto flex items-center justify-between mt-6 px-10'>
                 <div>
                     <Link className='text-3xl hover-links font-bold text-amber-300' href='/'>Anime Prime</Link>
-                    <p className='text-amber-300 italic'>your final source of watching anime!</p>
+                    <p className='text-amber-300 text-xs
+                     italic'>your true source of watching anime!</p>
                 </div>
                 <div className='md:flex md:gap-12 hidden md:block'>
-                    <Link className='hover-links' href='/'>Category</Link>
-                    <Link className='hover-links' href='/'>About Us</Link>
-                    <Link className='hover-links' href='/'>Donate</Link>       
+                    <Link className='hover-links' href='/animelist'>Anime List</Link> 
+                    <Link className='hover-links' href='/category'>Category</Link>
+                    <Link className='hover-links' href='/'>About Us</Link>      
                 </div>
                 <div className='md:hidden block'>
                     <Menu />

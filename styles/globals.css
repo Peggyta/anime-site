@@ -27,7 +27,7 @@ body {
     @apply mb-2 font-semibold text-cyan-500 text-lg
   }
   .social-media {
-    @apply w-8 h-8 flex justify-center items-center
+    @apply w-8 h-8 flex justify-center items-center md:w-12 md:h-12
   }
   .social-container {
     @apply hover:bg-amber-600 transition rounded-full mb-2
