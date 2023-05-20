@@ -8,13 +8,13 @@ const SocialMedia = () => {
     return (
         <div className='flex-col'>
            <div className='bg-sky-800 social-container'>
-                <a className='social-media md:w-12 md:h-12' href='#'><FaceBook /></a>
+                <a className='social-media' href='#'><FaceBook /></a>
             </div>
            <div className='bg-blue-600 social-container'>
-                <a className='social-media md:w-12 md:h-12' href='#'><Twitter /></a>
+                <a className='social-media' href='#'><Twitter /></a>
             </div>
            <div className='bg-green-600 social-container'>
-                <a className='social-media md:w-12 md:h-12' href='#'><Whatsapp /></a>
+                <a className='social-media' href='#'><Whatsapp /></a>
             </div>
         </div>
     );

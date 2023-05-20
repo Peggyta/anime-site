@@ -15,7 +15,7 @@ const Banner = () => {
                 party sources like mp4upload, vidstream, streamtape, mycloud. 
                 </p>
                 <div className='bg-cyan-950 mt-4 hover:bg-emerald-800 transition  rounded-xl py-3'>
-                    <Link className='font-bold w-full flex justify-center' href='/'>Anime List</Link>
+                    <Link className='font-bold w-full flex justify-center' href='/animelist'>Anime List</Link>
                 </div>
             </div>
             <div>
