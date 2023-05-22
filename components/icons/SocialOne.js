@@ -1,4 +1,4 @@
-function FaceBook () {
+function SocialOne () {
     return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="#cbd5e1" width="10" height="18.875" viewBox="0 0 10 18.875">
         <defs>
@@ -7,4 +7,4 @@ function FaceBook () {
     </svg>
     )
 }
-export default FaceBook;
+export default SocialOne;

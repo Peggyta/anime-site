@@ -1,4 +1,4 @@
-function Whatsapp () {
+function SocialThree () {
     return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="#cbd5e1" width="17.12" height="17.406" viewBox="0 0 17.12 17.406">
         <defs>
@@ -7,4 +7,4 @@ function Whatsapp () {
     </svg>
     )
 }
-export default Whatsapp;
+export default SocialThree;

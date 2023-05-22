@@ -1,4 +1,4 @@
-function Twitter () {
+function SocialTwo  () {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="#cbd5e1" width="18" height="14.625" viewBox="0 0 18 14.625">
         <defs>
@@ -7,4 +7,4 @@ function Twitter () {
       </svg>  
     )
 }
-export default Twitter;
+export default SocialTwo ;
