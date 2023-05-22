@@ -9,7 +9,7 @@ const Card = (props) => {
     return (
         <div className='mb-2'>
             <Link href={`/animelist/${id}`}>
-                <div className='relative hover:scale-110 hover:opacity-70 transition duration-500'>
+                <div className='relative hover:scale-110 shadow-md hover:opacity-70 transition duration-500'>
                     <Image className='rounded-lg'
                     src={`/images/${id}.jpg`} 
                     width={220}

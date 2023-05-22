@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import Menu from '../icons/Menu';
+import HamburgerMenu from '../modules/HamburgerMenu';
+import Cancel from '../icons/Cancel';
 
 const Layout = ({children}) => {
+    const[mobileMenu, setMobileMenu] = useState(false);
+    const[showMenu, setShowMenu] = useState(false);
     return (
         <div>
-            <header className='max-w-6xl mx-auto flex items-center justify-between mt-6 px-10'>
+            <header className='max-w-6xl relative mx-auto flex items-center justify-between mt-6 px-10'>
                 <div>
                     <Link className='text-3xl hover-links font-bold text-amber-300' href='/'>Anime Prime</Link>
                     <p className='text-amber-300 text-xs
@@ -13,11 +17,18 @@ const Layout = ({children}) => {
                 </div>
                 <div className='md:flex md:gap-12 hidden md:block'>
                     <Link className='hover-links' href='/animelist'>Anime List</Link> 
-                    <Link className='hover-links' href='/category'>Category</Link>
+                    <Link className='hover-links' href='/categories'>Category</Link>
                     <Link className='hover-links' href='/'>About Us</Link>      
                 </div>
-                <div className='md:hidden block'>
-                    <Menu />
+                <div  className={mobileMenu ? 'block': 'md:hidden'}>
+                    <button onClick={() => setMobileMenu(!mobileMenu)}>
+                        {mobileMenu ? <div className='absolute z-20 top-0'> <Cancel /> </div> :
+                        <div> <Menu /> </div>}
+                    </button>
+                    <div onClick={()=> setShowMenu(!showMenu)}
+                        className={mobileMenu ? 'block': 'hidden'}>
+                            <HamburgerMenu/>
+                    </div>
                 </div> 
             </header>
             <div className='max-w-6xl mx-auto min-h-screen px-10'>
