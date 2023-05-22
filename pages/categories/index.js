@@ -3,7 +3,7 @@ import Categories from '@/components/templates/Categories';
 
 const index = ({data}) => {
     return (
-        <div>
+        <div className=''>
           <Categories data={data} />  
         </div>
     );
@@ -22,21 +22,30 @@ export async function getServerSideProps(context) {
 
   const filteredAnime = data.filter((item)=> {
     const countryResult = item.details.filter((detail)=>
-      detail.Country === country );
+      detail.Country && detail.Country === country);
 
     const yearResult = item.details.filter((detail)=>
-    detail.Year === year);
+    detail.Year && detail.Year === year);
 
     const genreResult = item.details.filter((detail)=>
-    detail.Genre === genre);
+    detail.Genre && detail.Genre === genre);
 
-    if(!countryResult && !yearResult && genreResult) {
+    if(country && year && genre &&
+      countryResult.length && yearResult.length && genreResult.length) {
+        return item;
+    } else if(!country && !year && genre && genreResult.length) {
       return item;
-    } else if(!yearResult && !genreResult && countryResult) {
+    } else if(!year && !genre && country && countryResult.length) {
       return item;
-    } else if(!genreResult && !countryResult && yearResult) {
+    } else if(!genre && !country && year && yearResult.length) {
       return item;
-    }
+    } else if (!year && genre && country && genreResult.length && countryResult.length) {
+      return item;
+    } else if (!genre && year && country && yearResult.length && countryResult.length) {
+      return item;
+    } else if (!country && genre && year && genreResult.length && yearResult.length) {
+      return item;
+    } 
   });
 
   return {
