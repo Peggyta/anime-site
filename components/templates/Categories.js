@@ -54,7 +54,7 @@ const Categories = ({data}) => {
                 <div>
                     <button onClick={searchHandler} className='bg-emerald-800 px-5 rounded-lg transtion duration-75
                     font-semibold text-blue-200 hover:bg-emerald-600 sm:ml-3 w-48 
-                    mt-6 sm:mt-0 sm:w-28 hover:ease-in py-1'>Search</button>
+                    mt-4 sm:mt-0 sm:w-28 hover:ease-in py-1'>Search</button>
                 </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 md:mt-6 

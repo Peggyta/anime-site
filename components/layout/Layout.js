@@ -18,14 +18,14 @@ const Layout = ({children}) => {
                 <div className='md:flex md:gap-12 hidden md:block'>
                     <Link className='hover-links' href='/animelist'>Anime List</Link> 
                     <Link className='hover-links' href='/categories'>Category</Link>
-                    <Link className='hover-links' href='/'>About Us</Link>      
+                    <Link className='hover-links' href='/aboutus'>About Us</Link>      
                 </div>
-                <div  className={mobileMenu ? 'block': 'md:hidden'}>
+                <div onClick={() => setMobileMenu(!mobileMenu)}  className={mobileMenu ? 'block': 'md:hidden'}>
                     <button onClick={() => setMobileMenu(!mobileMenu)}>
                         {mobileMenu ? <div className='absolute z-20 top-0'> <Cancel /> </div> :
                         <div> <Menu /> </div>}
                     </button>
-                    <div onClick={()=> setShowMenu(!showMenu)}
+                    <div onClick={() => setShowMenu(!showMenu)}
                         className={mobileMenu ? 'block': 'hidden'}>
                             <HamburgerMenu/>
                     </div>

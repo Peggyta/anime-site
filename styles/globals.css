@@ -35,4 +35,7 @@ body {
   .hover-links {
     @apply hover:text-emerald-400 transition
   }
+  .select-option {
+   @apply rounded-lg bg-slate-200 text-blue-700 py-1 outline-none sm:w-28 w-48 
+  }
 } 
