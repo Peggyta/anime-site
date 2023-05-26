@@ -35,7 +35,7 @@ export async function getServerSideProps(context) {
       return item;
     } else if(!genre && year && yearResult.length) {
       return item;
-    } 
+    }
   });
   
   return {

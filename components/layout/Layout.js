@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Link from 'next/link';
 import Menu from '../icons/Menu';
 import HamburgerMenu from '../modules/HamburgerMenu';
+import GoTopButton from '../modules/GoTopButton';
 import Cancel from '../icons/Cancel';
 
 const Layout = ({children}) => {
@@ -34,6 +35,7 @@ const Layout = ({children}) => {
             <div className='max-w-6xl mx-auto min-h-screen px-10'>
                 {children}
             </div>
+            <GoTopButton />
             <footer className='w-full bg-gray-900'>
                 <div>
                     <p className='text-sm text-center py-4'>© 2023. All Rights Reserved.</p>

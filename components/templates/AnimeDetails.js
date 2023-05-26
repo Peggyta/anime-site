@@ -1,5 +1,6 @@
 import React from 'react';
 import Bookmarks from '../modules/Bookmarks';
+import BackButton from '../modules/BackButton';
 import Image from 'next/image';
 //icons:
 import Play from '../icons/Play';
@@ -13,6 +14,7 @@ const AnimeDetails = (props) => {
     
     return (
         <>
+        <BackButton />
         <div className='flex flex-col lg:flex-row lg:justify-start 
         mt-12 gap-7 justify-center items-center'>
             <div>
@@ -21,12 +23,13 @@ const AnimeDetails = (props) => {
             </div>
             <div>
                 <h3 className='sm:text-4xl lg:text-left text-center text-2xl text-blue-100'>{name} ({details[2].Year})</h3>
-            <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-2 mt-4 lg:mt-2
-            grid-cols-1 lg:place-items-start place-items-center items-center text-blue-400 mt-2 font-semibold text-lg'>
-                <p>Age: {age ? age : 'everyone'}</p>
-                <p className='lg:-ml-6'>Rate: {rate} / 10</p>
-                <p>Episodes: {episode}</p>
-                <p className='border px-2 rounded-lg text-center border-blue-500'>{television[4]}</p>
+            <div className='grid lg:grid-cols-4 sm:px-12 lg:px-0 sm:grid-cols-2 gap-2 lg:gap-0 mt-4 lg:mt-2
+            grid-cols-1 lg:place-items-start place-items-center content-center
+            text-blue-400 mt-2 font-semibold text-lg'>
+                <p className='pt-1'>Age: {age ? age : 'everyone'}</p>
+                <p className='lg:-ml-6 pt-1'>Rate: {rate} / 10</p>
+                <p className='pt-1'>Episodes: {episode}</p>
+                <p className='border p-2 text-sm rounded-lg text-center border-blue-500'>{television[4]}</p>
             </div>
             <div className='flex sm:flex-row lg:justify-start flex-col justify-center 
             text-center sm:text-left mt-6 lg:mt-2 gap-2'>
@@ -44,7 +47,7 @@ const AnimeDetails = (props) => {
                 <Video />
                 <p>Quality: {quality}</p>
             </div>
-            <div className='mt-4 sm:w-128 w-auto'>
+            <div className='lg:mt-4 mt-6 sm:w-128 w-auto'>
                 <p className='text-justify'><span className='font-semibold text-blue-400'>
                     Introduction: </span>{introduction}</p> 
             </div>
@@ -54,7 +57,7 @@ const AnimeDetails = (props) => {
                 <Bookmarks />
                 <div className='lg:w-128 lg:mx-0 mx-auto w-full'>
                     <button className='w-full flex justify-center items-center gap-2 bg-emerald-600 
-                        text-blue-100 font-bold sm:text-2xl text-base p-3 rounded-xl 
+                        text-blue-100 font-bold sm:text-2xl text-base py-3 rounded-xl 
                         hover:bg-emerald-500 transition mt-6'><Play />Watch Online
                     </button>
                 </div> 
