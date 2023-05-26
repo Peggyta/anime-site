@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Star from '../icons/Star';
 //function:
 import { shortenTitle } from '@/helper/functions';
 
@@ -19,7 +20,10 @@ const Card = (props) => {
                     <p className='text-sm'>{age ? age : null}</p>
                 </div>
                 <div className='absolute bg-cyan-900 rounded-b-lg w-full h-20 pl-4 bottom-0 z-10'>
-                    <p className='pt-2 text-slate-300 text-sm'>Rate: {rate}</p>
+                    <div className='flex items-center pt-2 gap-2'>
+                        <Star />
+                        <p className='text-slate-300 text-sm'>Rate: {rate}</p>
+                    </div>
                     <h4 className='font-semibold text-blue-300'>{shortenTitle(name)}</h4>
                 </div>
                 </div>
