@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
   const filteredAnime = data.filter((item)=> {
 
     const yearResult = item.details.filter((detail)=>
-    detail.Year && detail.Year == year);
+    detail.Year && detail.Year === +year);
 
     const genreResult = item.details.filter((detail)=>
     detail.Genre && detail.Genre === genre);
